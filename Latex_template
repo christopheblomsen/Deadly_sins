@@ -1,0 +1,101 @@
+\documentclass[10pt]{article}
+
+\title{Obligatoriske oppgaver i MAT-INF1100}
+\author{Christophe Kristian Blomsen \\ \href{mailto:chriskbl@student.matnat.uio.no}{chriskbl@student.matnat.uio.no}}
+\date{13.09.19}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scaled]{beramono}
+\usepackage[final]{microtype}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{listings}
+%\lstset{basicstyle = \ttfamily}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\usepackage{graphicx}
+\usepackage[colorlinks, allcolors = uiolink]{hyperref}
+
+
+
+% Makroer for oppgaver
+\newcounter{probnum}[section]
+\newcounter{subprobnum}[probnum]
+
+\newenvironment{oppgaver}{\vspace{12pt}\goodbreak \subsection*{Oppgaver}
+	\begin{list}{\bf Oppgave \arabic{probnum}.\ }
+		{\usecounter{probnum}\setlength{\itemsep}{6pt}}}{\end{list}\vfill\eject}
+
+\newcommand{\oppgave}{\item}
+
+\newenvironment{deloppgaver}{\begin{list}{\alph{subprobnum})}
+		{\usecounter{subprobnum}\setlength{\topsep}{3pt}
+			\setlength{\itemsep}{1.5pt}}}{\end{list}}
+
+\newcommand{\deloppgave}{\item}
+
+
+\pretolerance = 2000
+\tolerance    = 6000
+\hbadness     = 6000
+
+
+\renewcommand{\sfdefault}{phv}
+\definecolor{uiolink}{HTML}{0B5A9D}
+
+\lstdefinelanguage{matlab}
+{
+	morekeywords={for,def,if,while,do,break,return,from,import,try,except,else,elif},
+	sensitive=false,
+	morecomment=[l]{\#}
+}
+
+\lstset{language=matlab,
+	backgroundcolor=\color[rgb]{.95,.95,.95},
+	numbers=left,xleftmargin=10pt,
+	numberstyle=\tiny,stepnumber=1,numbersep=5pt,
+	stringstyle=\color{red},
+	basicstyle=\footnotesize \ttfamily,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green},
+	basewidth=0.60em,
+	showstringspaces=false,
+	captionpos=b,
+	frame=single
+}
+
+\begin{document}
+	\begin{titlepage}
+		\maketitle
+		
+		\begin{center}
+			I samarbeid med:\\
+			Vetle Henrik Hvoslef. e-post: 
+			\href{mailto:vetlehh@student.matnat.uio.no}{vetlehh@student.matnat.uio.no}\\
+			Vebjørn Øvereng. e-post: 
+			\href{mailto:vebjoro@student.matnat.uio.no}{vebjoro@student.matnat.uio.no}\\
+			Adam Jakobsen. e-post: 
+			\href{mailto:adamjak@student.matnat.uio.no}{adamjak@student.matnat.uio.no}\\
+		\end{center}
+	\end{titlepage}
+  
+  \begin{oppgaver}
+  \oppgave
+  \begin{deloppgaver}
+  \end{deloppgaver}
+  
+  \end{oppgaver}
+\end{document}
